@@ -1,0 +1,4 @@
+invoiceNumber,invoiceDate,billToName,totalAmount,filePath
+INV-2025-0001,2025-09-25,Adit Kumar,"₹12,345.00",invoice_INV-2025-0001.tex
+INV-2025-0001,2025-09-25,Adit Kumar,"₹12,345.00",invoice_INV-2025-0001.tex
+INV-2025-0001,2025-09-25,Adit Kumar,"₹12,345.00",invoice_INV-2025-0001.tex

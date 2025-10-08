@@ -1,0 +1,325 @@
+dateTime,transactionCategory,transactionAmount
+2025-01-06 19:55:54,Sales Revenue,179670
+2025-02-19 10:01:17,Sales Revenue,86330
+2025-03-23 08:11:16,Sales Revenue,159240
+2025-04-22 11:11:39,Sales Revenue,107860
+2025-05-24 18:36:45,Sales Revenue,67680
+2025-06-26 14:08:33,Sales Revenue,43900
+2025-07-26 14:36:28,Sales Revenue,146840
+2025-08-13 15:23:54,Sales Revenue,66220
+2025-09-05 15:02:17,Sales Revenue,210040
+2025-10-17 13:03:07,Sales Revenue,72140
+2025-11-26 10:50:08,Sales Revenue,175110
+2025-12-12 12:18:46,Sales Revenue,94330
+2025-01-06 11:35:59,Customer Prepayments,244840
+2025-02-13 17:17:23,Customer Prepayments,220130
+2025-03-12 13:35:33,Customer Prepayments,120190
+2025-04-08 11:15:08,Customer Prepayments,181540
+2025-05-23 13:42:47,Customer Prepayments,36600
+2025-06-12 10:26:06,Customer Prepayments,228900
+2025-07-01 15:30:51,Customer Prepayments,156260
+2025-08-11 11:10:41,Customer Prepayments,182540
+2025-09-07 15:02:33,Customer Prepayments,115810
+2025-10-15 13:11:22,Customer Prepayments,202840
+2025-11-20 18:02:41,Customer Prepayments,234000
+2025-12-04 19:30:35,Customer Prepayments,140680
+2025-01-01 08:22:12,Royalties & Licensing,178590
+2025-02-18 17:48:35,Royalties & Licensing,183020
+2025-03-08 12:00:14,Royalties & Licensing,210050
+2025-04-22 12:40:31,Royalties & Licensing,218680
+2025-05-04 12:13:43,Royalties & Licensing,225710
+2025-06-15 19:11:19,Royalties & Licensing,119060
+2025-07-05 15:42:22,Royalties & Licensing,21830
+2025-08-02 15:25:07,Royalties & Licensing,22260
+2025-09-02 16:04:17,Royalties & Licensing,106390
+2025-10-26 11:28:48,Royalties & Licensing,52980
+2025-11-13 14:18:44,Royalties & Licensing,107720
+2025-12-14 13:36:03,Royalties & Licensing,132450
+2025-01-06 16:06:59,Investment Returns,62700
+2025-02-11 09:43:47,Investment Returns,49710
+2025-03-25 12:10:30,Investment Returns,224900
+2025-04-08 08:52:45,Investment Returns,105940
+2025-05-05 12:14:44,Investment Returns,154090
+2025-06-17 16:32:50,Investment Returns,220850
+2025-07-15 15:47:21,Investment Returns,231030
+2025-08-12 14:14:14,Investment Returns,245050
+2025-09-18 15:27:52,Investment Returns,154330
+2025-10-19 11:25:28,Investment Returns,106640
+2025-11-11 13:46:02,Investment Returns,154060
+2025-12-10 10:49:46,Investment Returns,187240
+2025-01-03 19:47:01,Grants & Subsidies,72180
+2025-02-10 18:47:45,Grants & Subsidies,185360
+2025-03-19 15:42:06,Grants & Subsidies,106880
+2025-04-17 11:27:12,Grants & Subsidies,68380
+2025-05-05 16:53:01,Grants & Subsidies,34270
+2025-06-28 10:37:00,Grants & Subsidies,42010
+2025-07-25 11:04:20,Grants & Subsidies,66070
+2025-08-25 18:07:21,Grants & Subsidies,199490
+2025-09-22 19:33:34,Grants & Subsidies,96450
+2025-10-17 16:56:51,Grants & Subsidies,105770
+2025-11-26 09:23:09,Grants & Subsidies,137330
+2025-12-18 08:57:36,Grants & Subsidies,208310
+2025-01-03 10:20:52,Financing Activities,202120
+2025-02-10 16:39:11,Financing Activities,230620
+2025-03-11 11:13:40,Financing Activities,183890
+2025-04-14 08:07:08,Financing Activities,123300
+2025-05-17 17:27:05,Financing Activities,92080
+2025-06-22 18:09:40,Financing Activities,71090
+2025-07-21 09:03:33,Financing Activities,20410
+2025-08-26 17:15:31,Financing Activities,167240
+2025-09-19 18:02:02,Financing Activities,209830
+2025-10-16 14:33:38,Financing Activities,50980
+2025-11-13 08:30:19,Financing Activities,46450
+2025-12-09 13:09:56,Financing Activities,228830
+2025-01-27 17:07:56,Asset Liquidation,208880
+2025-02-27 08:48:27,Asset Liquidation,18480
+2025-03-25 18:09:35,Asset Liquidation,143270
+2025-04-07 12:30:55,Asset Liquidation,191640
+2025-05-12 17:54:57,Asset Liquidation,43010
+2025-06-15 09:41:20,Asset Liquidation,14330
+2025-07-06 11:05:16,Asset Liquidation,47670
+2025-08-04 13:39:53,Asset Liquidation,101640
+2025-09-24 08:27:17,Asset Liquidation,28940
+2025-10-26 12:32:03,Asset Liquidation,117750
+2025-11-10 14:17:46,Asset Liquidation,164220
+2025-12-15 10:47:19,Asset Liquidation,26290
+2025-01-02 09:49:37,Affiliate/Referral,166590
+2025-02-03 11:53:21,Affiliate/Referral,217950
+2025-03-15 19:38:17,Affiliate/Referral,197730
+2025-04-28 14:29:05,Affiliate/Referral,15260
+2025-05-28 08:14:30,Affiliate/Referral,85270
+2025-06-19 08:31:26,Affiliate/Referral,214040
+2025-07-11 12:05:24,Affiliate/Referral,20880
+2025-08-23 12:30:08,Affiliate/Referral,195280
+2025-09-06 10:49:18,Affiliate/Referral,70800
+2025-10-13 12:28:08,Affiliate/Referral,196300
+2025-11-22 11:31:30,Affiliate/Referral,193290
+2025-12-16 12:39:25,Affiliate/Referral,214830
+2025-01-10 10:31:08,Other Income,77930
+2025-02-10 13:56:05,Other Income,72800
+2025-03-15 18:32:38,Other Income,67700
+2025-04-03 13:52:08,Other Income,147210
+2025-05-08 08:21:56,Other Income,178230
+2025-06-25 13:01:25,Other Income,68540
+2025-07-08 11:06:23,Other Income,16300
+2025-08-16 10:04:40,Other Income,69600
+2025-09-23 09:13:12,Other Income,165170
+2025-10-04 10:21:29,Other Income,159570
+2025-11-01 08:11:58,Other Income,178250
+2025-12-26 14:08:40,Other Income,55500
+2025-01-24 11:50:26,Rent & Utilities,19110
+2025-02-19 12:38:17,Rent & Utilities,103920
+2025-03-22 10:29:25,Rent & Utilities,5320
+2025-04-01 11:45:17,Rent & Utilities,115590
+2025-05-07 17:43:53,Rent & Utilities,23760
+2025-06-26 13:00:42,Rent & Utilities,7700
+2025-07-17 14:12:58,Rent & Utilities,16470
+2025-08-25 16:11:29,Rent & Utilities,83490
+2025-09-06 15:30:49,Rent & Utilities,34290
+2025-10-10 13:51:46,Rent & Utilities,87390
+2025-11-27 14:58:39,Rent & Utilities,37930
+2025-12-22 12:51:39,Rent & Utilities,122330
+2025-01-25 15:00:11,Salaries & Wages,20080
+2025-02-08 08:15:48,Salaries & Wages,70770
+2025-03-03 12:03:38,Salaries & Wages,99160
+2025-04-25 15:28:18,Salaries & Wages,90270
+2025-05-10 17:16:27,Salaries & Wages,48610
+2025-06-15 12:56:12,Salaries & Wages,44270
+2025-07-19 12:30:47,Salaries & Wages,116630
+2025-08-08 17:19:14,Salaries & Wages,9120
+2025-09-13 12:21:58,Salaries & Wages,81720
+2025-10-16 18:02:15,Salaries & Wages,42110
+2025-11-25 15:52:14,Salaries & Wages,12220
+2025-12-05 18:28:43,Salaries & Wages,62800
+2025-01-11 14:16:21,Software Licenses,78060
+2025-02-08 18:51:37,Software Licenses,77540
+2025-03-12 15:28:57,Software Licenses,20210
+2025-04-22 10:45:54,Software Licenses,21660
+2025-05-01 15:51:45,Software Licenses,111760
+2025-06-14 17:41:39,Software Licenses,66370
+2025-07-13 19:43:58,Software Licenses,26310
+2025-08-08 09:55:45,Software Licenses,48380
+2025-09-08 13:25:18,Software Licenses,38850
+2025-10-13 10:26:31,Software Licenses,68970
+2025-11-08 14:04:24,Software Licenses,47900
+2025-12-25 17:27:23,Software Licenses,107870
+2025-01-12 16:17:45,Raw Materials / Inventory,21140
+2025-02-25 15:41:07,Raw Materials / Inventory,87720
+2025-03-25 08:38:10,Raw Materials / Inventory,60410
+2025-04-20 19:45:50,Raw Materials / Inventory,79350
+2025-05-14 16:24:28,Raw Materials / Inventory,70120
+2025-06-03 12:58:41,Raw Materials / Inventory,86610
+2025-07-11 08:27:46,Raw Materials / Inventory,49200
+2025-08-27 19:11:39,Raw Materials / Inventory,42990
+2025-09-04 18:33:39,Raw Materials / Inventory,25060
+2025-10-25 09:33:01,Raw Materials / Inventory,95930
+2025-11-23 13:35:58,Raw Materials / Inventory,79610
+2025-12-23 18:06:34,Raw Materials / Inventory,8610
+2025-01-27 18:23:44,Taxes & Compliance,48000
+2025-02-05 17:48:28,Taxes & Compliance,97740
+2025-03-11 19:54:55,Taxes & Compliance,35200
+2025-04-04 10:40:36,Taxes & Compliance,24090
+2025-05-07 16:02:34,Taxes & Compliance,85980
+2025-06-18 08:40:52,Taxes & Compliance,108080
+2025-07-19 14:01:50,Taxes & Compliance,121390
+2025-08-01 08:31:24,Taxes & Compliance,24920
+2025-09-16 08:09:22,Taxes & Compliance,121110
+2025-10-11 10:41:07,Taxes & Compliance,112330
+2025-11-07 18:49:11,Taxes & Compliance,105290
+2025-12-09 08:36:32,Taxes & Compliance,91620
+2025-01-10 13:07:33,Insurance,20800
+2025-02-05 19:34:55,Insurance,58060
+2025-03-09 09:46:18,Insurance,42800
+2025-04-16 16:06:54,Insurance,55890
+2025-05-28 17:29:47,Insurance,12740
+2025-06-16 18:16:58,Insurance,36920
+2025-07-27 16:07:26,Insurance,38820
+2025-08-01 14:13:24,Insurance,83590
+2025-09-27 16:13:54,Insurance,87370
+2025-10-21 16:05:16,Insurance,7930
+2025-11-09 14:28:26,Insurance,27220
+2025-12-16 17:00:06,Insurance,49610
+2025-01-03 17:28:39,Branding & Design,88100
+2025-02-10 12:13:51,Branding & Design,79330
+2025-03-05 09:48:09,Branding & Design,52850
+2025-04-14 14:10:17,Branding & Design,122470
+2025-05-20 11:21:31,Branding & Design,116520
+2025-06-02 13:42:38,Branding & Design,31570
+2025-07-11 14:45:12,Branding & Design,108510
+2025-08-23 18:51:44,Branding & Design,49820
+2025-09-06 17:21:18,Branding & Design,112790
+2025-10-24 09:08:38,Branding & Design,49700
+2025-11-28 16:25:29,Branding & Design,97890
+2025-12-06 12:43:19,Branding & Design,30500
+2025-01-14 09:35:19,Team Retreats / Perks,114590
+2025-02-04 15:49:06,Team Retreats / Perks,36250
+2025-03-17 19:14:55,Team Retreats / Perks,39080
+2025-04-02 14:06:40,Team Retreats / Perks,40610
+2025-05-16 14:52:32,Team Retreats / Perks,11420
+2025-06-17 19:10:26,Team Retreats / Perks,40820
+2025-07-24 11:19:16,Team Retreats / Perks,28560
+2025-08-24 13:32:29,Team Retreats / Perks,44160
+2025-09-08 19:14:26,Team Retreats / Perks,52670
+2025-10-01 12:33:40,Team Retreats / Perks,70800
+2025-11-28 15:51:42,Team Retreats / Perks,55540
+2025-12-22 15:23:53,Team Retreats / Perks,104390
+2025-01-16 10:58:10,Premium Tools,57780
+2025-02-03 17:25:49,Premium Tools,17130
+2025-03-11 14:11:41,Premium Tools,6110
+2025-04-24 14:13:56,Premium Tools,92270
+2025-05-04 13:58:41,Premium Tools,115340
+2025-06-09 12:01:18,Premium Tools,38690
+2025-07-24 08:53:29,Premium Tools,26790
+2025-08-23 14:43:02,Premium Tools,23370
+2025-09-15 16:58:22,Premium Tools,83800
+2025-10-02 14:43:32,Premium Tools,44690
+2025-11-14 16:02:13,Premium Tools,68640
+2025-12-06 17:45:48,Premium Tools,101060
+2025-01-22 19:21:11,Marketing Campaigns,89800
+2025-02-21 09:30:18,Marketing Campaigns,105190
+2025-03-05 10:10:07,Marketing Campaigns,66470
+2025-04-28 12:28:13,Marketing Campaigns,103470
+2025-05-05 10:14:38,Marketing Campaigns,96500
+2025-06-06 18:22:49,Marketing Campaigns,55550
+2025-07-15 10:26:43,Marketing Campaigns,82520
+2025-08-26 08:41:03,Marketing Campaigns,22180
+2025-09-21 18:22:34,Marketing Campaigns,71640
+2025-10-02 16:34:35,Marketing Campaigns,64270
+2025-11-16 14:49:08,Marketing Campaigns,29210
+2025-12-04 17:27:38,Marketing Campaigns,43390
+2025-01-21 13:49:55,Office Decor / Furniture,59200
+2025-02-19 10:34:28,Office Decor / Furniture,42230
+2025-03-21 08:27:29,Office Decor / Furniture,59530
+2025-04-14 19:42:22,Office Decor / Furniture,53990
+2025-05-13 13:33:05,Office Decor / Furniture,5410
+2025-06-09 10:32:31,Office Decor / Furniture,82110
+2025-07-05 19:27:46,Office Decor / Furniture,10490
+2025-08-17 17:31:06,Office Decor / Furniture,109220
+2025-09-07 13:11:03,Office Decor / Furniture,18550
+2025-10-09 12:54:29,Office Decor / Furniture,117040
+2025-11-07 16:31:04,Office Decor / Furniture,5260
+2025-12-28 18:33:36,Office Decor / Furniture,28050
+2025-01-05 16:11:28,R&D,56660
+2025-02-02 12:17:02,R&D,50290
+2025-03-01 12:02:01,R&D,68740
+2025-04-04 09:20:18,R&D,40790
+2025-05-02 10:21:55,R&D,118760
+2025-06-15 14:26:19,R&D,26600
+2025-07-18 18:27:27,R&D,86380
+2025-08-16 11:21:40,R&D,62410
+2025-09-03 08:12:26,R&D,106980
+2025-10-22 10:11:10,R&D,101760
+2025-11-24 09:38:32,R&D,8470
+2025-12-12 08:12:10,R&D,59690
+2025-01-09 14:19:41,Capital Expenditure,88120
+2025-02-06 17:12:03,Capital Expenditure,50150
+2025-03-16 19:22:55,Capital Expenditure,70470
+2025-04-25 11:45:02,Capital Expenditure,71390
+2025-05-06 19:10:34,Capital Expenditure,121640
+2025-06-10 16:35:59,Capital Expenditure,21780
+2025-07-17 14:37:11,Capital Expenditure,28780
+2025-08-23 10:26:48,Capital Expenditure,117730
+2025-09-18 13:46:26,Capital Expenditure,75350
+2025-10-15 08:28:07,Capital Expenditure,25180
+2025-11-12 17:37:58,Capital Expenditure,109940
+2025-12-07 18:20:45,Capital Expenditure,10610
+2025-01-14 14:49:40,Hiring for Scale,79700
+2025-02-26 12:18:46,Hiring for Scale,19390
+2025-03-11 18:28:20,Hiring for Scale,105050
+2025-04-25 17:18:01,Hiring for Scale,64040
+2025-05-28 14:01:59,Hiring for Scale,32190
+2025-06-13 12:08:49,Hiring for Scale,107530
+2025-07-01 16:00:26,Hiring for Scale,85820
+2025-08-09 08:34:53,Hiring for Scale,120910
+2025-09-13 16:13:33,Hiring for Scale,104590
+2025-10-16 13:47:36,Hiring for Scale,86650
+2025-11-14 10:40:54,Hiring for Scale,53290
+2025-12-26 16:27:01,Hiring for Scale,51000
+2025-01-24 16:30:39,Market Expansion,16290
+2025-02-18 19:09:29,Market Expansion,52450
+2025-03-26 11:32:57,Market Expansion,122020
+2025-04-06 13:05:04,Market Expansion,60970
+2025-05-13 10:07:56,Market Expansion,121040
+2025-06-03 15:43:32,Market Expansion,96050
+2025-07-23 08:33:51,Market Expansion,116070
+2025-08-20 10:54:15,Market Expansion,68210
+2025-09-08 08:37:20,Market Expansion,10390
+2025-10-22 12:09:42,Market Expansion,37420
+2025-11-16 19:49:58,Market Expansion,71620
+2025-12-08 17:56:31,Market Expansion,57500
+2025-01-14 12:20:15,Training & Upskilling,75390
+2025-02-28 09:56:11,Training & Upskilling,32270
+2025-03-19 11:32:10,Training & Upskilling,68380
+2025-04-18 08:58:52,Training & Upskilling,20820
+2025-05-04 15:35:22,Training & Upskilling,90450
+2025-06-28 09:28:09,Training & Upskilling,115700
+2025-07-14 17:06:49,Training & Upskilling,34720
+2025-08-23 09:09:51,Training & Upskilling,114360
+2025-09-07 19:49:13,Training & Upskilling,43330
+2025-10-28 09:45:32,Training & Upskilling,12290
+2025-11-25 19:59:48,Training & Upskilling,101010
+2025-12-04 15:26:36,Training & Upskilling,42060
+2025-01-18 09:58:11,Data Infrastructure,7860
+2025-02-28 16:14:10,Data Infrastructure,100650
+2025-03-02 13:41:56,Data Infrastructure,78820
+2025-04-03 19:48:56,Data Infrastructure,32840
+2025-05-20 17:10:51,Data Infrastructure,33360
+2025-06-12 18:49:12,Data Infrastructure,82800
+2025-07-14 17:51:20,Data Infrastructure,95190
+2025-08-07 10:08:38,Data Infrastructure,53460
+2025-09-24 16:21:07,Data Infrastructure,92130
+2025-10-26 08:57:24,Data Infrastructure,36040
+2025-11-22 19:17:14,Data Infrastructure,78530
+2025-12-26 12:35:19,Data Infrastructure,65770
+2025-01-06 16:56:45,Other Expenses,78510
+2025-02-10 11:40:04,Other Expenses,123540
+2025-03-08 17:50:48,Other Expenses,81780
+2025-04-08 10:48:19,Other Expenses,40340
+2025-05-16 19:52:59,Other Expenses,69370
+2025-06-07 14:47:08,Other Expenses,52790
+2025-07-26 15:15:08,Other Expenses,79120
+2025-08-10 13:40:15,Other Expenses,42400
+2025-09-10 12:53:01,Other Expenses,57460
+2025-10-27 16:51:29,Other Expenses,28710
+2025-11-07 12:54:58,Other Expenses,108660
+2025-12-22 11:47:09,Other Expenses,26260

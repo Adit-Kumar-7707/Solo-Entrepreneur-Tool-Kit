@@ -1,0 +1,141 @@
+\documentclass[11pt]{article}
+\usepackage[a4paper,margin=18mm]{geometry}
+\usepackage{array,booktabs,tabularx}
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage{tikz}
+\usepackage{fontspec}
+\usepackage{setspace}
+\usepackage{ragged2e}
+
+% --- Use Poppins font everywhere (requires xelatex or lualatex) ---
+\setmainfont{Poppins}
+
+% --- Colors ---
+\definecolor{primaryBlue}{HTML}{2E78B4}
+\definecolor{accentBlue}{HTML}{E8F4FB}
+\definecolor{lightGray}{gray}{0.9}
+\definecolor{footerGray}{gray}{0.45}
+
+% --- Variables ---
+\newcommand{\companyName}{Your Company Name}
+\newcommand{\companyAddress}{Your Business Address}
+\newcommand{\companyCity}{City}
+\newcommand{\companyCountry}{Country}
+\newcommand{\companyPostal}{Postal}
+\newcommand{\companyLogoPath}{logo.png} % put "logo.png" if you want logo
+
+\newcommand{\billToName}{Company Name}
+\newcommand{\billToAddress}{Address}
+\newcommand{\billToCity}{City}
+\newcommand{\billToCountry}{Country}
+\newcommand{\billToPostal}{Postal}
+
+\newcommand{\invoiceNumber}{0000001}
+\newcommand{\invoiceDate}{12/31/20}
+\newcommand{\invoiceDueDate}{12/31/20}
+
+\newcommand{\notesText}{Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent ut nisi tempus massa blandit luctus.}
+\newcommand{\totalAmount}{₹0,000.00}
+
+% Macro for items
+\newcommand{\addItem}[6]{#1 & #2 & \centering #3 & \raggedleft #4 & \centering #5 & \raggedleft #6 \\}
+
+\begin{document}
+\thispagestyle{empty}
+
+% ---------------- Header ----------------
+\noindent
+\colorbox{primaryBlue}{%
+  \parbox{\dimexpr\textwidth-2\fboxsep\relax}{%
+    \vspace{12pt}
+    \begin{minipage}[t]{0.60\textwidth}
+      {\fontsize{28}{32}\selectfont\bfseries\color{white} Invoice}
+    \end{minipage}%
+    \begin{minipage}[t]{0.38\textwidth}
+      \flushright
+      \ifx\companyLogoPath\empty
+        {\bfseries\color{white}\companyName}\\[3pt]
+        {\color{white}\small \companyAddress}\\
+        {\color{white}\small \companyCity}\\
+        {\color{white}\small \companyCountry}\\
+        {\color{white}\small \companyPostal}
+      \else
+        \includegraphics[height=1.5cm,keepaspectratio]{\companyLogoPath}
+      \fi
+    \end{minipage}
+    \vspace{12pt}
+  }%
+}
+\vspace{12pt}
+
+% ---------------- Bill To & Invoice Info ----------------
+\noindent
+\begin{minipage}[t]{0.60\textwidth}
+  \textbf{Bill To}\\[4pt]
+  {\large \billToName}\\
+  {\small \billToAddress}\\
+  {\small \billToCity}\\
+  {\small \billToCountry}\\
+  {\small \billToPostal}
+\end{minipage}
+\begin{minipage}[t]{0.38\textwidth}
+  \flushright
+  \textbf{Invoice \#}: \invoiceNumber\\[6pt]
+  \textbf{Date}: \invoiceDate\\[6pt]
+  \textbf{Due Date}: \invoiceDueDate
+\end{minipage}
+
+\vspace{10pt}
+\hrule
+\vspace{10pt}
+
+% ---------------- Items Table ----------------
+\begin{tabularx}{\textwidth}{@{} l X r r r r @{}}
+\toprule
+\textbf{ITEMS} & \textbf{DESCRIPTION} & \textbf{QUANTITY} & \textbf{PRICE} & \textbf{TAX} & \textbf{AMOUNT} \\
+\midrule
+% --- Insert generated item rows here (replace the placeholder from Python) ---
+%%ITEM_ROWS%%
+% Example (commented) rows if you want to test without replacing:
+%here the item list goes....
+\midrule
+\end{tabularx}
+
+\vspace{14pt}
+
+
+% ---------------- Notes + Total ----------------
+\begin{minipage}[t]{0.65\textwidth}
+  \fcolorbox{accentBlue}{accentBlue}{%
+    \parbox{\dimexpr\textwidth-2\fboxsep\relax}{%
+      \vspace{6pt}
+      \textbf{Notes}\\[4pt]
+      \small \notesText
+      \vspace{6pt}
+    }%
+  }
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.32\textwidth}
+  \colorbox{primaryBlue}{%
+    \parbox{\dimexpr\textwidth-2\fboxsep\relax}{%
+      \vspace{12pt}
+      \begin{center}
+        \textbf{\color{white}Total}\\[6pt]
+        {\fontsize{22}{26}\selectfont\bfseries\color{white} \totalAmount}
+      \end{center}
+      \vspace{12pt}
+    }%
+  }
+\end{minipage}
+
+\vfill
+
+% ---------------- Footer ----------------
+\begin{center}
+  {\footnotesize \textcolor{footerGray}{Powered by Wave \quad | \quad Generated with LaTeX}}\\[4pt]
+  {\tiny To learn more, visit \texttt{waveapps.com}}
+\end{center}
+
+\end{document}
