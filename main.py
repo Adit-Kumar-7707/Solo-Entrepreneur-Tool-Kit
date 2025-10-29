@@ -1,5 +1,5 @@
 import csv
-import time
+# import time
 # fill_invoice.py
 import os
 import re
@@ -8,9 +8,9 @@ import datetime as dt
 
 
 
-# Default values for LaTeX macros
+# variables for LaTeX templete
 companyName,companyAddress,companyCity,companyCountry,companyPostal,billToName,billToAddress,billToCity,billToCountry,billToPostal,invoiceNumber,invoiceDate,invoiceDueDate,notesText,totalAmount="","","","","","","","","","","","","","",""
-# Values to replace (camelCase keys match LaTeX macro names)
+# Values to replace with in latex code in the generated latex file
 fields = {
     'companyName': companyName,
     'companyAddress': companyAddress,
@@ -33,7 +33,7 @@ fields = {
 
 # Example items list (each item is a dict)
 items = [
-#    {'itemName': 'Mini Notebook', 'description': 'Handmade 20-page mini notebook', 'quantity': '3', 'price': '₹150', 'tax': '0%', 'amount': '₹450'},
+#    {'itemName': 'Mini Notebook', 'description': 'Handmade 20-page mini notebook', 'quantity': '3', 'price': '₹150', 'tax': '0%', 'amount': '₹450'}, this is the format 
 ]
 
 
@@ -69,7 +69,7 @@ def createInvoice():
                 if key in row:
                     fields[key] = row[key]
 
-            # Generate item rows from CSV data
+            # create item rows from CSV data
             items = []
             for i in range(1, 6):  # Assuming up to 5 items
                 item_key = f'item{i}Name'
@@ -84,17 +84,15 @@ def createInvoice():
                     }
                     items.append(item)
 
-            # Read template
+            # read and replace template
             with open('invoiceTemplate.tex', 'r') as f:
                 tex = f.read()
-
-            # Replace macro default values using regex
             for key, val in fields.items():
                 pattern = r'(\\newcommand\{\\' + re.escape(key) + r'\}\{)[^\}]*\}'
                 replacement = r'\1' + val + '}'
                 tex, n = re.subn(pattern, replacement, tex)
 
-            # Generate item rows using \addItem macro
+            # adds items to the space where required
             rows = []
             for it in items:
                 row = r'{' + it['itemName'] + '}&{' + it['description'] + '}&{' + it['quantity'] + '}&{₹' + it['price'] + '}&{' + it['tax'] + '\%}&{₹' + it['amount'] + '}\\'
@@ -103,7 +101,7 @@ def createInvoice():
             rows_text = '\n'.join(rows)
             tex = tex.replace('%%ITEM_ROWS%%', rows_text)
 
-            # Save filled tex with unique filename
+            # unique filename creator
             invoice_number = fields.get('invoiceNumber', '0000').replace('/', '-')
             output_tex_file = f'invoice_{invoice_number}.tex'
             with open(output_tex_file, 'w') as f:
@@ -111,7 +109,7 @@ def createInvoice():
             print(f"Generated {output_tex_file}")
 
 def recordInvoice(output_tex_file):
-    # Append invoice details to CSV file
+    # insert invoice details to CSV file
     with open("invoiceHistory.csv", 'a', newline='') as csvfile:
         fieldnames = ['invoiceNumber', 'invoiceDate', 'billToName', 'totalAmount', 'filePath']
         writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
@@ -267,6 +265,9 @@ Outflow:
 def getMoneyData():
     pass
 
+def getInvoiceData():
+    pass
+
 def moneyMonitor(amount,category,note):
     f=open('moneyFlow.csv','a+')
     f.write(f"{dt.datetime.now()},{amount},{category},{note}\n")
@@ -276,7 +277,7 @@ def moneyMonitor(amount,category,note):
 def productivityCalculator(hrsWorkedPerDay, profitPerMonth):
     if hrsWorkedPerDay == 0:
         return 0
-    industrialAvg = 5411  # Example industrial average productivity in ₹/hr
+    industrialAvg = 5411   #industrial average productivity in ₹/hr
     yourRate = (profitPerMonth / 30) / hrsWorkedPerDay
     productivity = ((yourRate/industrialAvg) * 100)
     print(f"Your productivity is {productivity}%")
