@@ -228,7 +228,7 @@ def proTip():
     print("Pro Tip: \n" + tips[i])
 
 
-"""def printMoneyFlowChart():#outline for moneyMonitor Module and its part
+printMoneyFlowChart():#outline for moneyMonitor Module and its part
     print('''
 Inflow:
     Sales Revenue
@@ -260,7 +260,7 @@ Outflow:
         Market Expansion
         Training & Upskilling
         Data Infrastructure
-''')"""
+''')
 
 def getMoneyData():
     pass
@@ -331,4 +331,5 @@ if __name__ == "__main__":
     output_tex_file = f'invoice_{invoice_number}.tex'
     recordInvoice(output_tex_file)
     os.system(f'pdflatex {output_tex_file}')
+
 
