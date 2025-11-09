@@ -228,7 +228,7 @@ def proTip():
     print("Pro Tip: \n" + tips[i])
 
 
-def printMoneyFlowChart():#outline for moneyMonitor Module and its part
+"""def printMoneyFlowChart():#outline for moneyMonitor Module and its part
     print('''
 Inflow:
     Sales Revenue
@@ -260,7 +260,7 @@ Outflow:
         Market Expansion
         Training & Upskilling
         Data Infrastructure
-''')
+''')"""
 
 def getMoneyData():
     pass
@@ -268,11 +268,46 @@ def getMoneyData():
 def getInvoiceData():
     pass
 
-def moneyMonitor(amount,category,note):
-    f=open('moneyFlow.csv','a+')
-    f.write(f"{dt.datetime.now()},{amount},{category},{note}\n")
-    f.close()
+def moneyMonitor():
+    printMoneyFlowChart()
+    choice = input("Enter the number of your category: ")
 
+    categories = {
+        "1": "Sales Revenue",
+        "2": "Customer Prepayments",
+        "3": "Royalties & Licensing",
+        "4": "Investment Returns",
+        "5": "Grants & Subsidies",
+        "6": "Financing Activities",
+        "7": "Asset Liquidation",
+        "8": "Affiliate/Referral",
+        "9": "Rent & Utilities",
+        "10": "Salaries & Wages",
+        "11": "Software Licenses",
+        "12": "Raw Materials / Inventory",
+        "13": "Taxes & Compliance",
+        "14": "Insurance",
+        "15": "Branding & Design",
+        "16": "Team Retreats / Perks",
+        "17": "Premium Tools",
+        "18": "Marketing Campaigns",
+        "19": "Office Decor / Furniture",
+        "20": "R&D",
+        "21": "Capital Expenditure",
+        "22": "Hiring for Scale",
+        "23": "Market Expansion",
+        "24": "Training & Upskilling",
+        "25": "Data Infrastructure"
+    }
+
+    category = categories.get(choice, "Other")
+    amount = input("Enter amount: ")
+    note = input("Enter note: ")
+
+    with open("moneyFlow.csv", "a") as f:
+        f.write(f"{dt.datetime.now()},{amount},{category},{note}\n")
+
+    print(f"\n✅ Entry saved successfully under '{category}' category!\n")
 
 def productivityCalculator(hrsWorkedPerDay, profitPerMonth):
     if hrsWorkedPerDay == 0:
@@ -296,3 +331,4 @@ if __name__ == "__main__":
     output_tex_file = f'invoice_{invoice_number}.tex'
     recordInvoice(output_tex_file)
     os.system(f'pdflatex {output_tex_file}')
+
