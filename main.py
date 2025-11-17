@@ -61,7 +61,7 @@ def getInvoiceFields():
 
 def createInvoice():
     # Read CSV file
-    with open('invoiceHistory.csv', 'r') as csvfile:
+    with open('C:\\Users\\aditk\\Desktop\\Solo Entrepreneur ToolKit\\invoiceHistory.csv', 'r') as csvfile:
         reader = csv.DictReader(csvfile)
         for row in reader:
             # Update fields dictionary with CSV row data
@@ -85,7 +85,7 @@ def createInvoice():
                     items.append(item)
 
             # read and replace template
-            with open('invoiceTemplate.tex', 'r') as f:
+            with open('C:\\Users\\aditk\\Desktop\\Solo Entrepreneur ToolKit\\invoiceTemplate.tex', 'r') as f:
                 tex = f.read()
             for key, val in fields.items():
                 pattern = r'(\\newcommand\{\\' + re.escape(key) + r'\}\{)[^\}]*\}'
@@ -102,20 +102,21 @@ def createInvoice():
             tex = tex.replace('%%ITEM_ROWS%%', rows_text)
 
             # unique filename creator
-            invoice_number = fields.get('invoiceNumber', '0000').replace('/', '-')
-            output_tex_file = f'invoice_{invoice_number}.tex'
-            with open(output_tex_file, 'w') as f:
-                f.write(tex)
-            print(f"Generated {output_tex_file}")
+        base_dir = r"C:\Users\aditk\Desktop\Solo Entrepreneur ToolKit"
+        invoice_number = (fields.get('invoiceNumber') or '0000').replace('/', '-').strip()
+        output_tex_path = os.path.join(base_dir, f"invoice_{invoice_number}.tex")
+        with open(output_tex_path, 'w', encoding='utf-8') as f:
+            f.write(tex)
+        print(f"Generated {output_tex_path}")
 
 def recordInvoice(output_tex_file):
     # insert invoice details to CSV file
-    with open("invoiceHistory.csv", 'a', newline='') as csvfile:
+    with open("C:\\Users\\aditk\\Desktop\\Solo Entrepreneur ToolKit\\invoiceHistory.csv", 'a', newline='') as csvfile:
         fieldnames = ['invoiceNumber', 'invoiceDate', 'billToName', 'totalAmount', 'filePath']
         writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
 
         # Write header if file is new
-        if os.stat("invoiceHistory.csv").st_size == 0:
+        if os.stat("C:\\Users\\aditk\\Desktop\\Solo Entrepreneur ToolKit\\invoiceHistory.csv").st_size == 0:
             writer.writeheader()
 
         writer.writerow({
@@ -228,38 +229,38 @@ def proTip():
     print("Pro Tip: \n" + tips[i])
 
 
-printMoneyFlowChart():#outline for moneyMonitor Module and its part
+def printMoneyFlowChart():#outline for moneyMonitor Module and its part
     print('''
 Inflow:
-    Sales Revenue
-    Customer Prepayments
-    Royalties & Licensing
-    Investment Returns
-    Grants & Subsidies
-    Financing Activities
-    Asset Liquidation
-    Affiliate/Referral
+1)    Sales Revenue
+2)    Customer Prepayments
+3)    Royalties & Licensing
+4)    Investment Returns
+5)    Grants & Subsidies
+6)    Financing Activities
+7)    Asset Liquidation
+8)    Affiliate/Referral
 Outflow:
     Needs:
-        Rent & Utilities
-        Salaries & Wages
-        Software Licenses
-        Raw Materials / Inventory
-        Taxes & Compliance  
-        Insurance
+    9)    Rent & Utilities
+    10)   Salaries & Wages
+    11)   Software Licenses
+    12)   Raw Materials / Inventory
+    13)   Taxes & Compliance  
+    14)   Insurance
     Wants:
-        Branding & Design
-        Team Retreats / Perks
-        Premium Tools
-        Marketing Campaigns
-        Office Decor / Furniture
+    15)   Branding & Design
+    16)   Team Retreats / Perks
+    17)   Premium Tools
+    18)   Marketing Campaigns
+    19)   Office Decor / Furniture
     Investments:
-        R&D
-        Capital Expenditure
-        Hiring for Scale
-        Market Expansion
-        Training & Upskilling
-        Data Infrastructure
+    20)   R&D
+    21)   Capital Expenditure
+    22)   Hiring for Scale
+    23)   Market Expansion
+    24)   Training & Upskilling
+    25)   Data Infrastructure
 ''')
 
 def getMoneyData():
@@ -268,68 +269,151 @@ def getMoneyData():
 def getInvoiceData():
     pass
 
-def moneyMonitor():
-    printMoneyFlowChart()
-    choice = input("Enter the number of your category: ")
-
-    categories = {
-        "1": "Sales Revenue",
-        "2": "Customer Prepayments",
-        "3": "Royalties & Licensing",
-        "4": "Investment Returns",
-        "5": "Grants & Subsidies",
-        "6": "Financing Activities",
-        "7": "Asset Liquidation",
-        "8": "Affiliate/Referral",
-        "9": "Rent & Utilities",
-        "10": "Salaries & Wages",
-        "11": "Software Licenses",
-        "12": "Raw Materials / Inventory",
-        "13": "Taxes & Compliance",
-        "14": "Insurance",
-        "15": "Branding & Design",
-        "16": "Team Retreats / Perks",
-        "17": "Premium Tools",
-        "18": "Marketing Campaigns",
-        "19": "Office Decor / Furniture",
-        "20": "R&D",
-        "21": "Capital Expenditure",
-        "22": "Hiring for Scale",
-        "23": "Market Expansion",
-        "24": "Training & Upskilling",
-        "25": "Data Infrastructure"
-    }
-
-    category = categories.get(choice, "Other")
-    amount = input("Enter amount: ")
-    note = input("Enter note: ")
-
-    with open("moneyFlow.csv", "a") as f:
-        f.write(f"{dt.datetime.now()},{amount},{category},{note}\n")
-
-    print(f"\n✅ Entry saved successfully under '{category}' category!\n")
-
-def productivityCalculator(hrsWorkedPerDay, profitPerMonth):
+def productivityCalculator():
+    hrsWorkedPerDay=int(input("Enter hrs Worked Per Day:"))
+    profitPerMonth=int(input("Enter profit Per Month:"))
     if hrsWorkedPerDay == 0:
         return 0
     industrialAvg = 5411   #industrial average productivity in ₹/hr
     yourRate = (profitPerMonth / 30) / hrsWorkedPerDay
     productivity = ((yourRate/industrialAvg) * 100)
-    print(f"Your productivity is {productivity}%")
+    print(f"Your productivity is {productivity:.2f}%")
     if yourRate < industrialAvg:
-        print(f"You are below the industrial average of {industrialAvg}%.\n")
+        print(f"You are at ₹{(profitPerMonth/30):.2f} i.e. below the industrial average of ₹{industrialAvg}.\n")
     elif yourRate > industrialAvg:
-        print(f"You are above the industrial average of {industrialAvg}%.\n")
+        print(f"You are at ₹{(profitPerMonth/30):.2f} i.e. above the industrial average of ₹{industrialAvg}.\n")
     else:
-        print(f"You are meeting the industrial average of {industrialAvg}%.\n")
+        print(f"You are at ₹{(profitPerMonth/30):.2f} i.e. meeting the industrial average of ₹{industrialAvg}.\n")
     proTip()
 
-if __name__ == "__main__":
+
+def compileInvoiceGenerator():
     createInvoice()
     # Assuming the last generated invoice is the one to record
+    print("----- INVOICE gENERATOR -----")
     invoice_number = fields.get('invoiceNumber', '0000').replace('/', '-')
     output_tex_file = f'invoice_{invoice_number}.tex'
     recordInvoice(output_tex_file)
     os.system(f'pdflatex {output_tex_file}')
+    
+def moneyMonitor():
+    print("----- MONEY MONITOR -----")
+    printMoneyFlowChart()
+    choice = int(input("Enter the number of your category: "))
+
+    categories = [
+        "Sales Revenue",
+        "Customer Prepayments",
+        "Royalties & Licensing",
+        "Investment Returns",
+        "Grants & Subsidies",
+        "Financing Activities",
+        "Asset Liquidation",
+        "Affiliate/Referral",
+        "Rent & Utilities",
+        "Salaries & Wages",
+        "Software Licenses",
+        "Raw Materials / Inventory",
+        "Taxes & Compliance",
+        "Insurance",
+        "Branding & Design",
+        "Team Retreats / Perks",
+        "Premium Tools",
+        "Marketing Campaigns",
+        "Office Decor / Furniture",
+        "R&D",
+        "Capital Expenditure",
+        "Hiring for Scale",
+        "Market Expansion",
+        "Training & Upskilling",
+        "Data Infrastructure"
+    ]
+
+    category = categories[choice-1]
+    amount = input("Enter amount: ")
+    note="None"
+    note = input("Enter note: ")
+
+    with open("C:\\Users\\aditk\\Desktop\\Solo Entrepreneur ToolKit\\moneyFlow.csv", "a") as f:
+        f.write(f"{dt.datetime.now()},{amount},{category},{note}\n")
+
+    print(f"\n Entry saved successfully under '{category}' category!\n")
+    f.close()
 
 
+
+
+def taxCalculator():
+    print("----- TAX CALCULATOR -----")
+
+    income = float(input("enter your yearly income (in ₹): "))
+
+    standard_deduction = 50000
+    print("standard deduction of ₹", standard_deduction, "is applied.")
+
+    investment_deduction = float(input("enter investment under 80C (max ₹150000): "))
+    if investment_deduction > 150000:
+        investment_deduction = 150000
+        print("only ₹150000 allowed under 80C, taking that.")
+
+    health_insurance = float(input("enter health insurance premium under 80D (max ₹25000): "))
+    if health_insurance > 25000:
+        health_insurance = 25000
+        print("only ₹25000 allowed under 80D, taking that.")
+
+    total_deductions = standard_deduction + investment_deduction + health_insurance
+    print("total deductions applied: ₹", total_deductions)
+
+    taxable_income = income - total_deductions
+    if taxable_income < 0:
+        taxable_income = 0
+    print("taxable income: ₹", taxable_income)
+
+    tax = 0
+    if taxable_income <= 250000:
+        tax = 0
+    elif taxable_income <= 500000:
+        tax = (taxable_income - 250000) * 0.05
+    elif taxable_income <= 1000000:
+        tax = (250000 * 0.05) + (taxable_income - 500000) * 0.20
+    else:
+        tax = (250000 * 0.05) + (500000 * 0.20) + (taxable_income - 1000000) * 0.30
+
+    if taxable_income <= 500000:
+        print("rebate under section 87A applied.")
+        tax = 0
+
+    print("--------------------------------")
+    print("final income tax payable: ₹", round(tax, 2))
+    print("--------------------------------")
+    print("Note:")
+    print("- keep all proofs for deductions claimed.")
+    print("- file ITR-3 or ITR-4 as applicable.")
+    print("- consider GST registration if turnover > ₹20 lakh.")
+    print("--------------------------------")
+
+
+if __name__ == "__main__":
+    while True:
+            print("""
+    Welcome to Solo Entrepreneur Toolkit\nMenu
+    1) Invoice Generator
+    2) Tax Calculator
+    3) Productivity Calculator
+    4) Money Monitor
+    5) Exit
+    """)
+            choice = input("Choose an option (1-5): ")
+            if choice == '1':
+                compileInvoiceGenerator()
+            elif choice == '2':
+                taxCalculator()
+            elif choice == '3':
+                productivityCalculator()
+            elif choice == '4':
+                moneyMonitor()
+            elif choice == '5':
+                print("Exiting.\nHave a nice time ahead.")
+                break
+            else:
+                print("Invalid option. Please choose between 1 and 5.")
